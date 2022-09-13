@@ -1,4 +1,3 @@
-// import { addToCart } from "./storage/addToCart.js";
 import createNav from "./component/createNav.js";
 import { baseURL } from "./utilities/baseUrl.js";
 import { displayProductDetails } from "./component/displayProdDetails.js";

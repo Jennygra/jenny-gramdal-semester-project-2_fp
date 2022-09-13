@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shoeworld | Product</title>
+    <title>Shoeworld | Edit product</title>
     <link rel="icon" type="image/png" href="/img/favicon-310.png" />
 
     <!-- Bootstrap CSS -->
@@ -37,47 +37,59 @@
     <div class="wrapper">
       <header class="nav-container"></header>
       <main>
-        <div>
+        <section>
           <div>
-            <div class="product-detail-container"></div>
-          </div>
-        </div>
-
-        <section class="feature-products-container">
-          <div class="feature-products-item--text">
-            <h2>Our fav this summer</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-              nonumy eirmod.
-            </p>
-            <button class="cta-btn">See more</button>
+            <h2>Edit product</h2>
           </div>
 
-          <div class="feature-products-wrapper">
-            <div class="feature-products-item--carousel"></div>
+          <div>
+            <form class="edit-product-form">
+              <div class="mb-3">
+                <label>Product id</label>
+                <input type="text" class="edit_id--input" />
+              </div>
 
-            <div class="feature-products-item--scroller">
-              <i class="fa-solid fa-circle-chevron-left" id="carousel-prev"></i>
-              <i
-                class="fa-solid fa-circle-chevron-right"
-                id="carousel-next"
-              ></i>
-            </div>
-          </div>
-        </section>
+              <div class="mb-3">
+                <label>Product name</label>
+                <input type="text" class="edit_name--input" />
+              </div>
 
-        <section class="banner-container">
-          <div class="banner-item--img"></div>
+              <div class="mb-3">
+                <label>Price</label>
+                <input type="number" class="edit_price--input" />
+              </div>
 
-          <div class="banner-item--text">
-            <h1>New Shoes for Summer?</h1>
-            <p>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-              erat, sed diam voluptua. At vero.
-            </p>
-            <button class="cta-btn">Read more</button>
-            <div class="edit_btn--container"></div>
+              <div class="mb-3">
+                <label>Image URL</label>
+                <input type="url" class="edit_img--input" />
+              </div>
+
+              <div class="mb-3">
+                <label>Description</label>
+                <textarea
+                  name="description"
+                  class="edit_decription--input"
+                  cols="30"
+                  rows="10"
+                ></textarea>
+              </div>
+
+              <div class="mb-3">
+                <input type="checkbox" class="edit_feature--checkbox" />
+                <label>Check to feature this product</label>
+              </div>
+
+              <button
+                type="submit"
+                id="editProduct-btn"
+                class="btn btn-primary"
+                type="button"
+              >
+                Update
+              </button>
+
+              <div id="delete_product_btn--container"></div>
+            </form>
           </div>
         </section>
       </main>
@@ -106,7 +118,6 @@
         </div>
       </div>
     </footer>
-    <script src="js/component/banner.js"></script>
-    <script src="js/productDetail.js" type="module"></script>
+    <script src="js/editproduct.js" type="module"></script>
   </body>
 </html>

@@ -1,5 +1,6 @@
 import { baseURL } from "../utilities/baseUrl.js";
 import { addToCart } from "../utilities/addToCart.js";
+import { getUserName } from "../utilities/storage.js";
 
 const productDetailContainer = document.querySelector(
   ".product-detail-container"
@@ -12,6 +13,20 @@ export function displayProductDetails(product) {
   const price = product[0].price;
   const description = product[0].description;
   const id = product[0].id;
+  const userName = getUserName();
+
+  let editBtn = "";
+
+  if (userName) {
+    editBtn = `
+    <button
+    id="editProduct-btn"
+    class="btn btn-primary"
+    type="button" onclick="location.href='edit-product.html?id=${id}';">
+    Edit this product
+    </button>
+  `;
+  }
 
   productDetailContainer.innerHTML += `
     <div class="product_detail--wrapper">
@@ -32,6 +47,7 @@ export function displayProductDetails(product) {
   
     <div>
     <button class="cta-btn" id="cartBtn" data-id="${id}" data-title="${titel}" data-price="${price}" data-img="${img}"> Add to cart </button>
+    ${editBtn}
     </div>
     </div>
   

@@ -12,10 +12,9 @@ export default function createNav() {
     <li><a href="add-product.html" class="${
       pathname === "/add-product.html" ? "active" : ""
     }">Add product</a></li>
-    <li><a href="edit-product.html" class="${
-      pathname === "/edit-product.html" ? "active" : ""
-    }">Edit product</a></li>
-    <li><a href="backoffice.html" class="text-muted">Log out</a></li>
+    <li><a href="backoffice.html" class="text-muted ${
+      pathname === "/backoffice.html" ? "active" : ""
+    }">Log out</a></li>
     `;
   }
 
