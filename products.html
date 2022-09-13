@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shoeworld | Products</title>
+    <link rel="icon" type="image/png" href="/img/favicon-310.png" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+
+    <!-- Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,500;0,600;0,800;1,100&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/0da1880f97.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="nav-container"></header>
+      <main>
+        <section>
+          <div class="container">
+            <div class="row product_header--wrapper">
+              <div class="col-sm">
+                <h1>New in</h1>
+              </div>
+
+              <div class="col-sm product_header--search">
+                <input
+                  type="search"
+                  class="search-input"
+                  placeholder="Search"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="
+              d-flex
+              justify-content-evenly
+              flex-wrap
+              mb-3
+              prducts-container
+            "
+            id="products-container"
+          ></div>
+        </section>
+
+        <section class="feature-collection-container">
+          <div class="feature-collection-item">
+            <img
+              src="img/full-sploot-1-350x350.png"
+              alt="A dog streching out"
+            />
+            <div class="feature-collection-item--text">
+              <h3>The importance of streching after a workout</h3>
+              <button class="cta-btn">Read more</button>
+            </div>
+          </div>
+
+          <div class="feature-collection-item">
+            <img src="img/trendest-studio-XZ3EmAIWuz0-unsplash.png" alt="" />
+            <div class="feature-collection-item--text">
+              <h3>Something exclusive?</h3>
+              <button class="cta-btn">See more</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="newsletter-container">
+          <h4>Register on our newsletter!</h4>
+          <p>Keep up to date with promotions, new products and sales.</p>
+          <div class="input-group newsltter-input-wrapper">
+            <input
+              type="email"
+              class="form-control"
+              id="newsletter-input"
+              placeholder="Enter your email"
+              required
+            />
+            <span class="input-group-btn">
+              <button class="btn" id="newsletter-btn" type="submit">
+                Subscribe
+              </button>
+            </span>
+          </div>
+          <div class="newsletter-msg error-msg">error</div>
+          <div class="newsletter-msg success-msg">success</div>
+        </section>
+      </main>
+    </div>
+    <footer>
+      <div class="container text-center footer-container">
+        <div class="row">
+          <div class="col-sm footer-item--icons">
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-square-facebook"></i>
+            <i class="fa-brands fa-tiktok"></i>
+          </div>
+
+          <div class="col-sm footer-item--nav">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="products.html">Products</a></li>
+            </ul>
+          </div>
+
+          <div class="col-sm footer-logo-container">
+            <a href="index.html"
+              ><img src="img/shoeworld-logo.png" alt="Shoeworld logo"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/products.js" type="module"></script>
+  </body>
+</html>

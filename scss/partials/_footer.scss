@@ -1,0 +1,44 @@
+footer {
+  padding-top: 2em;
+
+  ul {
+    text-align: center;
+  }
+}
+
+.footer-container {
+  margin: auto;
+  padding: 0;
+}
+
+footer img {
+  max-height: 100px;
+}
+
+footer,
+footer a {
+  color: $secondary-color;
+}
+
+.footer-item--icons {
+  display: flex;
+  gap: 1em;
+  margin-left: 2em;
+  align-items: center;
+}
+
+.footer-logo-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media screen and (max-width: 540px) {
+  .footer-item--icons {
+    justify-content: center;
+    margin: 1em 0em 2em 0em;
+  }
+
+  .footer-logo-container {
+    justify-content: center;
+  }
+}

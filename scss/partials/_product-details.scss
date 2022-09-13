@@ -1,0 +1,42 @@
+.product_detail--wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5em;
+  margin: 5em auto;
+}
+
+.product_detail--img {
+  img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 20%;
+  }
+}
+
+.product_detail--details {
+  width: 100%;
+  max-width: 400px;
+
+  h1 {
+    font-weight: bold;
+    font-size: 47px;
+  }
+
+  .product_detail--price {
+    color: $primary-color;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 37px;
+  }
+
+  .product_detail--fee {
+    color: $dark-gray;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .product_detail--details {
+    text-align: center;
+  }
+}

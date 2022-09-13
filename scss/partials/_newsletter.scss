@@ -1,0 +1,66 @@
+.newsletter-container {
+  background-color: $primary-color;
+
+  padding: 8em;
+  text-align: center;
+
+  h4 {
+    color: white;
+    font-weight: 800;
+    font-size: 35px;
+  }
+
+  p {
+    color: $secondary-color;
+    font-weight: 800;
+    font-size: 20px;
+  }
+
+  ::placeholder {
+    text-align: center;
+  }
+
+  input {
+    border: 1px solid #707070;
+    border-radius: 36px;
+    padding: 10px 20px;
+  }
+}
+
+.newsltter-input-wrapper {
+  align-items: center;
+  max-width: 60%;
+  margin: auto;
+
+  button {
+    background-color: white;
+    color: $primary-color;
+    border: 1px solid #707070;
+    border-radius: 0px 36px 36px 0px;
+    padding: 10px;
+  }
+}
+
+.newsletter-msg {
+  display: none;
+}
+
+@media screen and (max-width: 992px) {
+  .newsletter-container {
+    padding: 3em;
+
+    p {
+      font-size: $font-size-mobile-p;
+    }
+
+    h4 {
+      font-size: $font-size-mobile-h4;
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .newsltter-input-wrapper {
+    max-width: 100%;
+  }
+}
