@@ -2,8 +2,6 @@ import { getUserName } from "../utilities/storage.js";
 
 export default function createNav() {
   const { pathname } = document.location;
-  console.log(pathname);
-
   const navContainer = document.querySelector(".nav-container");
 
   const userName = getUserName();
@@ -16,7 +14,8 @@ export default function createNav() {
     }">Add product</a></li>
     <li><a href="edit-product.html" class="${
       pathname === "/edit-product.html" ? "active" : ""
-    }">Product</a></li>
+    }">Edit product</a></li>
+    <li><a href="backoffice.html" class="text-muted">Log out</a></li>
     `;
   }
 
