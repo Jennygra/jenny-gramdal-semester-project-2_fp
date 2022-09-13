@@ -2,8 +2,10 @@ import { baseURL } from "./utilities/baseUrl.js";
 import createNav from "./component/createNav.js";
 import { featureProduct } from "./component/featureProduct.js";
 import { displayMsg } from "./component/displayMsg.js";
+import createNewsletter from "./component/newsletter.js";
 
 createNav();
+createNewsletter();
 
 const productUrl = baseURL + "/products";
 
