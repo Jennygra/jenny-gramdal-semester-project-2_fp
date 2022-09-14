@@ -1,4 +1,4 @@
-import { validateEmail } from "../utilities/validation.js";
+import { submitNewsletter } from "./submitNewsletter.js";
 
 export default function createNewsletter() {
   const newsletterContainer = document.querySelector(".newsletter-container");
@@ -26,32 +26,6 @@ export default function createNewsletter() {
           <div class="newsletter-msg success-msg">success</div>
           `;
 
-  const newsletterInput = document.querySelector("#newsletter-input");
-  const newsletterError = document.querySelector(".error-msg");
   const newsletterBtn = document.querySelector("#newsletter-btn");
-
-  function validateNewsletter() {
-    event.preventDefault();
-
-    let isNewsletterValidated = true;
-
-    if (validateEmail(newsletterInput.value) === true) {
-      newsletterError.style.display = "none";
-    } else {
-      newsletterError.style.display = "block";
-      isNewsletterValidated = false;
-    }
-
-    return isNewsletterValidated;
-  }
-
-  function submitNewsletter() {
-    if (!validateNewsletter) {
-      return false;
-    } else {
-      console.log("submitted");
-    }
-  }
-
   newsletterBtn.addEventListener("click", submitNewsletter);
 }

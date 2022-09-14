@@ -1,5 +1,5 @@
-export function validateEmail(email, newsletter) {
+export function validateEmail(newsletter) {
   const regEx = /\S+@\S+\.\S+/;
-  const patternMatches = regEx.test(email, newsletter);
+  const patternMatches = regEx.test(newsletter);
   return patternMatches;
 }
