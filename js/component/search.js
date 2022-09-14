@@ -3,15 +3,20 @@ import { displayProducts } from "./displayProducts.js";
 export function searchProduct(products) {
   const searchInput = document.querySelector(".search-input");
 
-  console.log(products);
-  console.log(searchInput);
-
   searchInput.onkeyup = function (event) {
     const searchValue = event.target.value.trim().toLowerCase();
-    const filteredProduct = products.filter((product) =>
-      product.title.toLowerCase().startWith(searchValue)
+    const filteredProduct = products.filter(
+      (product) =>
+        product.title.toLowerCase().startsWith(searchValue) ||
+        product.description.toLowerCase().startsWith(searchValue)
     );
 
-    console.log(filteredProduct);
+    if (filteredProduct.length === 0) {
+      console.log("no result");
+    }
+
+    console.log("Filtered products:", filteredProduct);
+
+    displayProducts(filteredProduct);
   };
 }

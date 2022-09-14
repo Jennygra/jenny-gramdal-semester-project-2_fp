@@ -1,7 +1,9 @@
-import { baseURL } from "../utilities/baseUrl.js";
-const productsContainer = document.querySelector("#products-container");
+// import { baseURL } from "../utilities/baseUrl.js";
 
 export function displayProducts(product) {
+  const productsContainer = document.querySelector("#products-container");
+  productsContainer.innerHTML = "";
+
   for (let i = 0; i < product.length; i++) {
     // const productImg = baseURL + product[i].image.url;
     const productTitel = product[i].title;
