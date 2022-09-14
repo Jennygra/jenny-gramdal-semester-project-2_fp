@@ -50,16 +50,32 @@ h3,
 h4,
 html,
 body {
-  font-family: "Raleway", sans-serif;
+  font-family: "Raleway", sans-serif !important;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: bold;
 }
 
 .cta-btn {
   color: white;
   background: #3db290;
   border: none;
-  padding: 5px 10px;
+  padding: 5px 2em;
   -webkit-box-shadow: 2px 2px 10px -6px rgba(0, 0, 0, 0.8);
           box-shadow: 2px 2px 10px -6px rgba(0, 0, 0, 0.8);
+}
+
+#newsletter-btn {
+  font-weight: bold;
+}
+
+#newsletter-btn:hover {
+  color: white;
+  background-color: #444444;
 }
 
 header {
@@ -198,17 +214,8 @@ header a :hover {
 }
 
 @media screen and (max-width: 800px) {
-  .banner-item--img img {
-    -webkit-filter: opacity(0.3);
-            filter: opacity(0.3);
-  }
   .banner-item--text {
-    max-width: unset;
-    text-align: center;
-    right: 0%;
-  }
-  .banner-item--text p {
-    font-size: 16px;
+    display: none;
   }
 }
 
@@ -237,15 +244,6 @@ header a :hover {
       align-self: center;
 }
 
-.feature-products-item--carousel {
-  overflow-x: scroll;
-  overflow-y: hidden;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 2em;
-}
-
 .feature-products-carousel--item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -259,17 +257,28 @@ header a :hover {
 }
 
 .feature-products-carousel--item a {
-  height: 180px;
-  width: 180px;
+  height: 300px;
+  width: 300px;
 }
 
 .feature-products-carousel--item img {
+  -o-object-fit: cover;
+     object-fit: cover;
   height: 100%;
   width: 100%;
   overflow: hidden;
   border-radius: 20px;
   -webkit-box-shadow: 2px 2px 10px -6px rgba(0, 0, 0, 0.8);
           box-shadow: 2px 2px 10px -6px rgba(0, 0, 0, 0.8);
+}
+
+.feature-products-item--product {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2em;
 }
 
 .feature-products-item--scroller {
@@ -305,9 +314,9 @@ header a :hover {
   }
   .feature-products-container {
     -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .feature-products-item--text {
     max-width: 100%;
@@ -424,7 +433,7 @@ header a :hover {
 
 .newsletter-container {
   background-color: #3db290;
-  padding: 8em;
+  padding: 12em;
   text-align: center;
 }
 
@@ -484,7 +493,7 @@ header a :hover {
 
 @media screen and (max-width: 992px) {
   .newsletter-container {
-    padding: 3em;
+    padding: 6em;
   }
   .newsletter-container p {
     font-size: 16px;

@@ -1,13 +1,13 @@
 const nextBtn = document.querySelector("#carousel-next");
 const prevBtn = document.querySelector("#carousel-prev");
-const featureProductsItemCarousel = document.querySelector(
-  ".feature-products-item--carousel"
+const carouselConatiner = document.querySelector(
+  ".feature-products-item--product "
 );
 
 nextBtn.addEventListener("click", function () {
-  featureProductsItemCarousel.scrollLeft += 350;
+  carouselConatiner.scrollLeft += 350;
 });
 
 prevBtn.addEventListener("click", function () {
-  featureProductsItemCarousel.scrollLeft -= 350;
+  carouselConatiner.scrollLeft -= 350;
 });

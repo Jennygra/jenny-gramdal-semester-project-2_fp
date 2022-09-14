@@ -1,7 +1,7 @@
 .newsletter-container {
   background-color: $primary-color;
 
-  padding: 8em;
+  padding: 12em;
   text-align: center;
 
   h4 {
@@ -47,7 +47,7 @@
 
 @media screen and (max-width: 992px) {
   .newsletter-container {
-    padding: 3em;
+    padding: 6em;
 
     p {
       font-size: $font-size-mobile-p;

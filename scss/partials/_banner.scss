@@ -23,17 +23,7 @@
 }
 
 @media screen and (max-width: 800px) {
-  .banner-item--img img {
-    filter: opacity(0.3);
-  }
-
   .banner-item--text {
-    max-width: unset;
-    text-align: center;
-    right: 0%;
-  }
-
-  .banner-item--text p {
-    font-size: $font-size-mobile-p;
+    display: none;
   }
 }
