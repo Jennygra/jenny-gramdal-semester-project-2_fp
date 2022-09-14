@@ -22,8 +22,8 @@ export default function createNewsletter() {
               </span>
           </form>
           </div>
-          <div class="newsletter-msg error-msg">error</div>
-          <div class="newsletter-msg success-msg">success</div>
+          <div class="newsletter-msg error-msg">Invalid email, please try again</div>
+          <div class="newsletter-msg success-msg">Success! A discount code is sent to your email</div>
           `;
 
   const newsletterBtn = document.querySelector("#newsletter-btn");
