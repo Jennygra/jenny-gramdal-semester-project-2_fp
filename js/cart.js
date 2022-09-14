@@ -20,14 +20,14 @@ if (localStorage.length === 0 || localStorage.getItem(listKey) === "[]") {
 } else {
   cartList.forEach((product) => {
     cartListContainer.innerHTML += `
-        <div class="feature-products-carousel--item">
+        <div class="cart_list--wrapper ">
         <a href="product-details.html?id=${product.id}" id="${product.id}">
         <img src="${product.img}" alt="">
         </a>
         <div>
         <h5>${product.title}</h5>
         <p>$${product.price}</p>
-        <button class="remove_from_cart--btn" id="${product.id}">Remove</button>
+        <button class="remove_from_cart--btn cta-btn" id="${product.id}">Remove</button>
         </div>
         </div>
         `;

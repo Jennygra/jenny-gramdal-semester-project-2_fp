@@ -12,7 +12,7 @@ export function displayProducts(product) {
     const productId = product[i].id;
 
     productsContainer.innerHTML += `
-          <div class="feature-products-carousel--item">
+          <div class="products--wrapper">
           <a href="product-details.html?id=${productId}" id="${productId}">
           <img src="${productImg}" alt="${productImgAlt}">
           </a>
