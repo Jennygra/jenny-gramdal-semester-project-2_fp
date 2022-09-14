@@ -15,8 +15,6 @@ function validateNewsletter() {
     isValidated = false;
   }
 
-  console.log(isValidated);
-
   return isValidated;
 }
 
@@ -24,10 +22,8 @@ export function submitNewsletter() {
   const newsletterSuccess = document.querySelector(".success-msg");
 
   if (!validateNewsletter()) {
-    console.log("fail to submit newsletter");
     return false;
   } else {
-    console.log("submitted");
     newsletterSuccess.style.display = "block";
   }
 }
