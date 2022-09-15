@@ -21,7 +21,7 @@ export function displayProductDetails(product) {
     editBtn = `
     <button
     id="editProduct-btn"
-    class="btn btn-primary"
+    class="btn"
     type="button" onclick="location.href='edit-product.html?id=${id}';">
     Edit this product
     </button>
