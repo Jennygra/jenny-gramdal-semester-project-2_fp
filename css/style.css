@@ -101,6 +101,22 @@ h5 {
   background-color: #444444;
 }
 
+.remove_from_cart--btn,
+#deleteProduct-btn {
+  background: #bdbdbd;
+  border: none;
+}
+
+.log_out--container {
+  text-align: center;
+  margin: 5em;
+}
+
+.log_out--container button {
+  background: #bdbdbd;
+  border: none;
+}
+
 header {
   display: -ms-grid;
   display: grid;
@@ -642,10 +658,6 @@ header a :hover {
   gap: 2em;
 }
 
-.remove_from_cart--btn {
-  background: #bdbdbd;
-}
-
 .cart_list--wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -672,6 +684,53 @@ header a :hover {
   border-radius: 20px;
   -webkit-box-shadow: 2px 2px 10px -6px rgba(0, 0, 0, 0.8);
           box-shadow: 2px 2px 10px -6px rgba(0, 0, 0, 0.8);
+}
+
+.edit_product--container,
+.add_product--container {
+  max-width: 80%;
+  margin: auto;
+  margin-top: 5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 3em;
+}
+
+.edit_product--header,
+.add_product--header {
+  text-align: center;
+}
+
+.edit-product-form--item,
+.add-product-form--item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.edit-product-form,
+.add-product-form {
+  max-width: 600px;
+  margin: auto;
+}
+
+.edit-product-form--description,
+.add-product-form--description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 footer {

@@ -37,31 +37,29 @@
     <div class="wrapper">
       <header class="nav-container"></header>
       <main>
-        <section class="welcome_header--container"></section>
-
-        <section>
-          <div>
+        <section class="add_product--container">
+          <div class="add_product--header">
             <h2>Add product</h2>
           </div>
 
           <div>
             <form class="add-product-form">
-              <div class="mb-3">
+              <div class="mb-3 add-product-form--item">
                 <label>Product name</label>
                 <input type="text" class="productName-input" />
               </div>
 
-              <div class="mb-3">
+              <div class="mb-3 add-product-form--item">
                 <label>Price</label>
                 <input type="number" class="productPrice-input" />
               </div>
 
-              <div class="mb-3">
+              <div class="mb-3 add-product-form--item">
                 <label>Image URL</label>
                 <input type="url" class="productImg-input" />
               </div>
 
-              <div class="mb-3">
+              <div class="mb-3 add-product-form--description">
                 <label>Description</label>
                 <textarea
                   name="description"
@@ -79,7 +77,7 @@
               <button
                 type="submit"
                 id="addProduct-btn"
-                class="btn btn-primary"
+                class="btn cta-btn"
                 type="button"
               >
                 Add product

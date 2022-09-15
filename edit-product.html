@@ -37,34 +37,34 @@
     <div class="wrapper">
       <header class="nav-container"></header>
       <main>
-        <section>
-          <div>
+        <section class="edit_product--container">
+          <div class="edit_product--header">
             <h2>Edit product</h2>
           </div>
 
           <div>
             <form class="edit-product-form">
-              <div class="mb-3">
+              <div class="mb-3 edit-product-form--item">
                 <label>Product id</label>
                 <input type="text" class="edit_id--input" />
               </div>
 
-              <div class="mb-3">
+              <div class="mb-3 edit-product-form--item">
                 <label>Product name</label>
                 <input type="text" class="edit_name--input" />
               </div>
 
-              <div class="mb-3">
+              <div class="mb-3 edit-product-form--item">
                 <label>Price</label>
                 <input type="number" class="edit_price--input" />
               </div>
 
-              <div class="mb-3">
+              <div class="mb-3 edit-product-form--item">
                 <label>Image URL</label>
                 <input type="url" class="edit_img--input" />
               </div>
 
-              <div class="mb-3">
+              <div class="mb-3 edit-product-form--description">
                 <label>Description</label>
                 <textarea
                   name="description"
@@ -82,7 +82,7 @@
               <button
                 type="submit"
                 id="editProduct-btn"
-                class="btn btn-primary"
+                class="btn cta-btn"
                 type="button"
               >
                 Update

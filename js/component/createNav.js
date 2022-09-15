@@ -49,7 +49,7 @@ export default function createNav() {
           </li>
           <li>
             <a href="cart.html" aria-label="cart"
-              ><i class="fa-solid fa-cart-shopping"></i
+              ><i class="fa-solid fa-cart-shopping cart-icon"></i
             ></a>
           </li>
         </ul>

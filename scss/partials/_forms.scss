@@ -1,0 +1,31 @@
+.edit_product--container,
+.add_product--container {
+  max-width: 80%;
+  margin: auto;
+  margin-top: 5em;
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+}
+.edit_product--header,
+.add_product--header {
+  text-align: center;
+}
+
+.edit-product-form--item,
+.add-product-form--item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.edit-product-form,
+.add-product-form {
+  max-width: 600px;
+  margin: auto;
+}
+
+.edit-product-form--description,
+.add-product-form--description {
+  display: flex;
+  flex-direction: column;
+}

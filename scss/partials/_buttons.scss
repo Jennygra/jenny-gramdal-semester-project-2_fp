@@ -32,3 +32,19 @@
   color: white;
   background-color: $secondary-color;
 }
+
+.remove_from_cart--btn,
+#deleteProduct-btn {
+  background: $dark-gray;
+  border: none;
+}
+
+.log_out--container {
+  text-align: center;
+  margin: 5em;
+
+  button {
+    background: $dark-gray;
+    border: none;
+  }
+}

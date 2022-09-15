@@ -7,7 +7,11 @@ export function addToCart() {
   const price = this.dataset.price;
   const img = this.dataset.img;
 
-  console.log(id, title, price, img);
+  const cartBtn = document.querySelector("#cartBtn");
+  cartBtn.innerHTML = "Added!";
+
+  const cartIcon = document.querySelector(".cart-icon");
+  cartIcon.classList.toggle("fa-bounce");
 
   const getCurrentProduct = isExistingProduct();
   const existingProduct = getCurrentProduct.find(
