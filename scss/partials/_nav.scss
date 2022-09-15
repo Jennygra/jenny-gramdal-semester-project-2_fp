@@ -2,6 +2,7 @@ header {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
+  border-bottom: 3px solid $secondary-color;
 }
 
 .header-logo {
@@ -97,6 +98,7 @@ header a {
     background-color: white;
     top: 100%;
     z-index: 1;
+    box-shadow: 1px 10px 5px 0px rgba(179, 170, 170, 0.24);
 
     ul {
       display: flex;
