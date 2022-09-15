@@ -45,6 +45,17 @@
   display: none;
 }
 
+.error-msg {
+  color: red;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.success-msg {
+  font-weight: bold;
+  padding: 10px;
+}
+
 @media screen and (max-width: 992px) {
   .newsletter-container {
     padding: 6em;

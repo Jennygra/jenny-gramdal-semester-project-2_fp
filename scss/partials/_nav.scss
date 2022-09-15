@@ -59,6 +59,11 @@ header a {
   #hamburger-menu {
     display: none;
   }
+
+  .nav-container {
+    max-width: 90%;
+    margin: auto;
+  }
 }
 
 @media screen and (max-width: 992px) {

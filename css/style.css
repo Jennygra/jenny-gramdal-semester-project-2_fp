@@ -152,6 +152,10 @@ header a :hover {
   #hamburger-menu {
     display: none;
   }
+  .nav-container {
+    max-width: 90%;
+    margin: auto;
+  }
 }
 
 @media screen and (max-width: 992px) {
@@ -524,6 +528,17 @@ header a :hover {
 
 .newsletter-msg {
   display: none;
+}
+
+.error-msg {
+  color: red;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.success-msg {
+  font-weight: bold;
+  padding: 10px;
 }
 
 @media screen and (max-width: 992px) {

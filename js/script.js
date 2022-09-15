@@ -1,8 +1,11 @@
 import { baseURL } from "./utilities/baseUrl.js";
 import createNav from "./component/createNav.js";
 import { featureProduct } from "./component/featureProduct.js";
-import { displayMsg } from "./component/displayMsg.js";
 import createNewsletter from "./component/newsletter.js";
+
+const featureProductContainer = document.querySelector(
+  ".feature-products-container"
+);
 
 createNav();
 createNewsletter();
@@ -16,11 +19,6 @@ const productUrl = baseURL + "/products";
 
     featureProduct(result);
   } catch (error) {
-    console.log(error);
-    displayMsg(
-      "error",
-      "Ops! Something wrong happened, please come back later",
-      ".feature-products-container"
-    );
+    featureProductContainer.style.display = "none";
   }
 })();
