@@ -7,10 +7,16 @@
 }
 
 .product_detail--img {
+  height: 500px;
+  width: 500px;
+
   img {
+    object-fit: cover;
+    height: 100%;
     width: 100%;
-    max-width: 300px;
-    border-radius: 20%;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px -6px rgba(0, 0, 0, 0.8);
   }
 }
 
@@ -38,5 +44,10 @@
 @media screen and (max-width: 640px) {
   .product_detail--details {
     text-align: center;
+    padding: 0em 1em;
+  }
+
+  .product_detail--img {
+    padding: 1em;
   }
 }
