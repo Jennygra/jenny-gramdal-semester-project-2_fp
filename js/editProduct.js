@@ -96,23 +96,22 @@ async function updateProduct(id, name, price, description, image, feature) {
   });
 
   const token = localStorage.getItem("token");
-  console.log(token);
+  const apiToken = JSON.parse(token);
 
   const option = {
     method: "PUT",
     body: data,
     headers: {
       "Content-Type": "application/json",
-      //   Authorization: `Bearer ${token}`,
-      Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjYyODEwMjY5LCJleHAiOjE2NjU0MDIyNjl9.RQV0Kgfw458jaHaAdmdGZcFclR9gsuahVXDCxzkStR4`,
+      Authorization: `Bearer ${apiToken}`,
     },
   };
+
+  console.log(option);
 
   try {
     const response = await fetch(url, option);
     const json = await response.json();
-
-    console.log(json);
 
     if (json.created_at) {
       console.log("the product have been updated ");

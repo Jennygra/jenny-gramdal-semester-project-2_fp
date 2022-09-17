@@ -5,10 +5,6 @@ export function saveToken(token) {
   saveToStarage(tokenKey, token);
 }
 
-export function getToken() {
-  getFromStorage(tokenKey);
-}
-
 export function saveUser(user) {
   saveToStarage(userKey, user);
 }

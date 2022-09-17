@@ -1,26 +1,7 @@
 import createNav from "./component/createNav.js";
-import { getUserName } from "./utilities/storage.js";
 import { baseURL } from "./utilities/baseUrl.js";
 
 createNav();
-
-const welcomeHeaderContainer = document.querySelector(
-  ".welcome_header--container"
-);
-
-function displayUserName() {
-  const username = getUserName();
-
-  if (username) {
-    welcomeHeaderContainer.innerHTML = `
-    <div>
-    <h1>Hello, ${username}!</h1> 
-    </div> 
-    `;
-  }
-}
-
-displayUserName();
 
 const addProductForm = document.querySelector(".add-product-form");
 const productName = document.querySelector(".productName-input");
@@ -71,15 +52,14 @@ async function addProduct(name, price, description, image, feature) {
   });
 
   const token = localStorage.getItem("token");
-  console.log(token);
+  const apiToken = JSON.parse(token);
 
   const option = {
     method: "POST",
     body: data,
     headers: {
       "Content-Type": "application/json",
-      //   Authorization: `Bearer ${token}`,
-      Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjYyODEwMjY5LCJleHAiOjE2NjU0MDIyNjl9.RQV0Kgfw458jaHaAdmdGZcFclR9gsuahVXDCxzkStR4`,
+      Authorization: `Bearer ${apiToken}`,
     },
   };
 

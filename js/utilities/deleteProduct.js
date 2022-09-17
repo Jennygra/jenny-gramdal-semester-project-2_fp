@@ -14,16 +14,15 @@ export default function deleteProduct(id) {
   button.onclick = async function () {
     const doDelete = confirm("Are you sure you want to delete this product?");
 
-    console.log(doDelete);
-
     if (doDelete) {
       const url = baseURL + `/products/${id}`;
-      // const token = localStorage.getItem("token");
+      const token = localStorage.getItem("token");
+      const apiToken = JSON.parse(token);
+
       const option = {
         method: "DELETE",
         headers: {
-          //   Authorization: `Bearer ${token}`,
-          Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjYyODEwMjY5LCJleHAiOjE2NjU0MDIyNjl9.RQV0Kgfw458jaHaAdmdGZcFclR9gsuahVXDCxzkStR4`,
+          Authorization: `Bearer ${apiToken}`,
         },
       };
 
