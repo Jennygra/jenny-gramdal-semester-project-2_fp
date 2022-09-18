@@ -7,15 +7,13 @@ export function searchProduct(products) {
     const searchValue = event.target.value.trim().toLowerCase();
     const filteredProduct = products.filter(
       (product) =>
-        product.title.toLowerCase().startsWith(searchValue) ||
-        product.description.toLowerCase().startsWith(searchValue)
+        product.title.toLowerCase().includes(searchValue) ||
+        product.description.toLowerCase().includes(searchValue)
     );
 
     if (filteredProduct.length === 0) {
       console.log("no result");
     }
-
-    console.log("Filtered products:", filteredProduct);
 
     displayProducts(filteredProduct);
   };
