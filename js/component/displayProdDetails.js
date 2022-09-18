@@ -18,7 +18,7 @@ export function displayProductDetails(product) {
   const userName = getUserName();
 
   let prodImg;
-  if (img === "http://localhost:1337undefined") {
+  if (img === "http://localhost:1337undefined" || null || undefined) {
     prodImg = altImg;
   } else {
     prodImg = img;

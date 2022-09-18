@@ -14,7 +14,7 @@ export function displayProducts(product) {
 
     let img;
 
-    if (productImg === "http://localhost:1337undefined") {
+    if (productImg === "http://localhost:1337undefined" || null || undefined) {
       img = altImg;
     } else {
       img = productImg;

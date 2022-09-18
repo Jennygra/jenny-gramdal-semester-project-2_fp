@@ -772,6 +772,22 @@ header a :hover {
   text-decoration: underline;
 }
 
+.error {
+  text-align: center;
+  color: darkred;
+  background-color: lightpink;
+  padding: 10px;
+  border: 2px solid darkred;
+}
+
+.success {
+  text-align: center;
+  color: darkgreen;
+  background-color: lightgreen;
+  border: 2px solid darkgreen;
+  padding: 10px;
+}
+
 .modal {
   display: none;
   position: fixed;

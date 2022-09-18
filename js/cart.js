@@ -31,7 +31,7 @@ if (localStorage.length === 0 || localStorage.getItem(listKey) === "[]") {
   cartList.forEach((product) => {
     let prodImg;
 
-    if (product.img === "http://localhost:1337undefined") {
+    if (product.img === "http://localhost:1337undefined" || null || undefined) {
       prodImg = product.image_url;
     } else {
       prodImg = product.img;
