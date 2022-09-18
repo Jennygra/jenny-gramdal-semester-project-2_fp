@@ -37,9 +37,8 @@ export default function deleteProduct(id) {
           ".edit_product-msg--container"
         );
 
-        // location.href = "index.html";
+        location.href = "index.html";
       } catch (error) {
-        console.log(error);
         displayMsg(
           "error",
           "Sorry, couldn't delete the product. <br> Something unexpected happened, please try again later",

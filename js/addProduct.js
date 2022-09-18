@@ -1,6 +1,7 @@
 import createNav from "./component/createNav.js";
 import { baseURL } from "./utilities/baseUrl.js";
 import { noAccessMsg } from "./component/displayMsg.js";
+import { displayMsg } from "./component/displayMsg.js";
 
 createNav();
 noAccessMsg(".add_product--container");
@@ -29,7 +30,11 @@ function submitForm() {
     imageUrl.length === 0 ||
     descriptionValue.length === 0
   ) {
-    console.log("Please fill out the form correctly");
+    displayMsg(
+      "warn",
+      "Please fill out the form correctly",
+      ".add_prod_msg--container"
+    );
   }
 
   let isChecked;
@@ -70,14 +75,26 @@ async function addProduct(name, price, description, image, feature) {
     const json = await response.json();
 
     if (json.created_at) {
-      console.log("the product have been added ");
+      displayMsg(
+        "success",
+        "The product have been successfully added",
+        ".add_prod_msg--container"
+      );
       addProductForm.reset();
     }
 
     if (json.error) {
-      console.log("You dont have the access to add products");
+      displayMsg(
+        "warn",
+        "Sorry, you don't have the access to add product",
+        ".add_prod_msg--container"
+      );
     }
   } catch (error) {
-    console.log(error);
+    displayMsg(
+      "warn",
+      "Sorry, Something unexpected happened, please try again later",
+      ".add_prod_msg--container"
+    );
   }
 }

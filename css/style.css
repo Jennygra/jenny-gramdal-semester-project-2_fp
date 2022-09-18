@@ -778,6 +778,7 @@ header a :hover {
   background-color: lightpink;
   padding: 10px;
   border: 2px solid darkred;
+  margin: 2em 0em;
 }
 
 .success {
@@ -786,6 +787,16 @@ header a :hover {
   background-color: lightgreen;
   border: 2px solid darkgreen;
   padding: 10px;
+  margin: 2em 0em;
+}
+
+.warn {
+  text-align: center;
+  color: black;
+  background-color: lightgray;
+  border: 2px solid black;
+  padding: 10px;
+  margin: 2em 0em;
 }
 
 .modal {

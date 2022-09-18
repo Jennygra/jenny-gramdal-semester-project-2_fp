@@ -2,6 +2,7 @@ import createNav from "./component/createNav.js";
 import { baseURL } from "./utilities/baseUrl.js";
 import { displayProductDetails } from "./component/displayProdDetails.js";
 import { featureProduct } from "./component/featureProduct.js";
+import { displayMsg } from "./component/displayMsg.js";
 
 const loaderContainer = document.querySelector(".loader-container");
 const productDetailWrapper = document.querySelector(".product-detail--wrapper");
@@ -36,7 +37,11 @@ const featureProdUrl = baseURL + "/products";
 
     displayProductDetails(result);
   } catch (error) {
-    console.log(error);
+    displayMsg(
+      "warn",
+      "Something unexpected happened, please try again!",
+      ".product_details_msg--container"
+    );
   }
 })();
 
@@ -47,6 +52,10 @@ const featureProdUrl = baseURL + "/products";
 
     featureProduct(result);
   } catch (error) {
-    console.log(error);
+    displayMsg(
+      "warn",
+      "Something unexpected happened, please try again!",
+      ".product_details_msg--container"
+    );
   }
 })();

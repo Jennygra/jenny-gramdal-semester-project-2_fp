@@ -2,6 +2,7 @@ import createNav from "./component/createNav.js";
 import { baseURL } from "./utilities/baseUrl.js";
 import deleteProduct from "./utilities/deleteProduct.js";
 import { noAccessMsg } from "./component/displayMsg.js";
+import { displayMsg } from "./component/displayMsg.js";
 
 createNav();
 noAccessMsg(".edit_product--container");
@@ -42,7 +43,11 @@ const featureCheckbox = document.querySelector(".edit_feature--checkbox");
 
     deleteProduct(json[0].id);
   } catch (error) {
-    console.log(error);
+    displayMsg(
+      "warn",
+      "Something unexpected happened, please try again!",
+      ".edit_prod_msg--container"
+    );
   }
 })();
 
@@ -64,7 +69,11 @@ function submitForm() {
     imageUrl.length === 0 ||
     descriptionValue.length === 0
   ) {
-    console.log("Please fill out the form correctly");
+    displayMsg(
+      "warn",
+      "Please fill out the form correctly",
+      ".edit_prod_msg--container"
+    );
   }
 
   let isChecked;
@@ -112,14 +121,26 @@ async function updateProduct(id, name, price, description, image, feature) {
     const json = await response.json();
 
     if (json.created_at) {
-      console.log("the product have been updated ");
+      displayMsg(
+        "success",
+        "The product have been successfully updated",
+        ".edit_prod_msg--container"
+      );
       editProductForm.reset();
     }
 
     if (json.error) {
-      console.log("You dont have the access to edit the product");
+      displayMsg(
+        "warn",
+        "Sorry, you don't have the access to add product",
+        ".edit_prod_msg--container"
+      );
     }
   } catch (error) {
-    console.log(error);
+    displayMsg(
+      "warn",
+      "Sorry, Something unexpected happened, please try again later",
+      ".edit_prod_msg--container"
+    );
   }
 }

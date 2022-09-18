@@ -26,7 +26,7 @@ export const cartListContainer = document.querySelector(
 
 if (localStorage.length === 0 || localStorage.getItem(listKey) === "[]") {
   console.log("empty cart");
-  displayMsg("error", "The cart is empty", ".cart_list--container");
+  displayMsg("warn", "The cart is empty", ".cart_msg--container");
 } else {
   cartList.forEach((product) => {
     let prodImg;

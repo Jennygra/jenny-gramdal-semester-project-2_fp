@@ -1,6 +1,7 @@
 import createNav from "./createNav.js";
 import { baseURL } from "../utilities/baseUrl.js";
 import { saveToken, saveUser } from "../utilities/storage.js";
+import { displayMsg } from "./displayMsg.js";
 
 createNav();
 
@@ -27,7 +28,11 @@ function submitForm(event) {
   const passwordValue = password.value.trim();
 
   if (usernameValue.length === 0 || passwordValue === 0) {
-    console.log("invalid, please try again");
+    displayMsg(
+      "error",
+      "Please fill out email address or password",
+      ".backoffice_msg--container"
+    );
   }
 
   doLogin(usernameValue, passwordValue);
@@ -52,10 +57,8 @@ async function doLogin(username, password) {
     const response = await fetch(url, option);
     const json = await response.json();
 
-    console.log(json);
-
     if (json.user) {
-      console.log("yeay! loged in");
+      displayMsg("success", "You are logged in!", ".backoffice_msg--container");
 
       saveToken(json.jwt);
       saveUser(json.user);
@@ -64,9 +67,17 @@ async function doLogin(username, password) {
     }
 
     if (json.error) {
-      console.log("failed to logg in");
+      displayMsg(
+        "warn",
+        "Invalid email address or password, please try again!",
+        ".backoffice_msg--container"
+      );
     }
   } catch (error) {
-    console.log(error);
+    displayMsg(
+      "warn",
+      "Something unexpected happened, please try again!",
+      ".backoffice_msg--container"
+    );
   }
 }

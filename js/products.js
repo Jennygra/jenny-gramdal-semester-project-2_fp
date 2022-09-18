@@ -3,6 +3,7 @@ import createNewsletter from "./component/newsletter.js";
 import { baseURL } from "./utilities/baseUrl.js";
 import { displayProducts } from "./component/displayProducts.js";
 import { searchProduct } from "./component/search.js";
+import { displayMsg } from "./component/displayMsg.js";
 
 const loaderContainer = document.querySelector(".loader-container");
 const searchContainer = document.querySelector(".search--container");
@@ -32,11 +33,14 @@ const productUrl = baseURL + "/products";
     const response = await fetch(productUrl);
     const json = await response.json();
 
-    console.log(json);
-
     displayProducts(json);
     searchProduct(json);
   } catch (error) {
     console.log(error);
+    displayMsg(
+      "warn",
+      "Something unexpected happened, please try again!",
+      ".products-msg--container"
+    );
   }
 })();
