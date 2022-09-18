@@ -1,9 +1,10 @@
 import { baseURL } from "../utilities/baseUrl.js";
-const carouselContainer = document.querySelector(
-  ".feature-products-item--product"
-);
 
 export function featureProduct(product) {
+  const carouselContainer = document.querySelector(
+    ".feature-products-item--product"
+  );
+
   const featuredProducts = product.filter(
     (products) => products.featured === true
   );
