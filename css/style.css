@@ -763,6 +763,15 @@ header a :hover {
           flex-direction: column;
 }
 
+.no_access_msg--wrapper {
+  text-align: center;
+}
+
+.no_access_msg--wrapper a {
+  color: #3db290;
+  text-decoration: underline;
+}
+
 footer {
   padding-top: 2em;
 }

@@ -46,17 +46,22 @@
             <form class="edit-product-form">
               <div class="mb-3 edit-product-form--item">
                 <label>Product id</label>
-                <input type="text" class="edit_id--input" />
+                <input type="text" class="edit_id--input" readonly />
               </div>
 
               <div class="mb-3 edit-product-form--item">
                 <label>Product name</label>
-                <input type="text" class="edit_name--input" />
+                <input type="text" class="edit_name--input" required />
               </div>
 
               <div class="mb-3 edit-product-form--item">
                 <label>Price</label>
-                <input type="number" class="edit_price--input" />
+                <input
+                  type="number"
+                  step=".01"
+                  class="edit_price--input"
+                  required
+                />
               </div>
 
               <div class="mb-3 edit-product-form--item">

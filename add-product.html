@@ -46,12 +46,17 @@
             <form class="add-product-form">
               <div class="mb-3 add-product-form--item">
                 <label>Product name</label>
-                <input type="text" class="productName-input" />
+                <input type="text" class="productName-input" required />
               </div>
 
               <div class="mb-3 add-product-form--item">
                 <label>Price</label>
-                <input type="number" class="productPrice-input" />
+                <input
+                  type="number"
+                  step=".01"
+                  class="productPrice-input"
+                  required
+                />
               </div>
 
               <div class="mb-3 add-product-form--item">

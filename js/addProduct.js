@@ -1,7 +1,9 @@
 import createNav from "./component/createNav.js";
 import { baseURL } from "./utilities/baseUrl.js";
+import { noAccessMsg } from "./component/displayMsg.js";
 
 createNav();
+noAccessMsg(".add_product--container");
 
 const addProductForm = document.querySelector(".add-product-form");
 const productName = document.querySelector(".productName-input");
@@ -30,12 +32,12 @@ function submitForm() {
     console.log("Please fill out the form correctly");
   }
 
-  let isChecked = false;
+  let isChecked;
 
   if (featureProduct.checked) {
     isChecked = true;
   } else {
-    return isChecked;
+    isChecked = false;
   }
 
   addProduct(nameValue, priceValue, descriptionValue, imageUrl, isChecked);

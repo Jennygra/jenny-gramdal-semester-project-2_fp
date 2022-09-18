@@ -5,7 +5,7 @@ export function displayProducts(product) {
   productsContainer.innerHTML = "";
 
   for (let i = 0; i < product.length; i++) {
-    const productImg = baseURL + product[i].image.url;
+    let productImg = baseURL + product[i].image.url;
     const productTitel = product[i].title;
     const productImgAlt = product[i].image.alternativeText;
     const productPrice = product[i].price;
@@ -14,7 +14,7 @@ export function displayProducts(product) {
     productsContainer.innerHTML += `
           <div class="products--wrapper">
           <a href="product-details.html?id=${productId}" id="${productId}">
-          <img src="${productImg}" alt="${productImgAlt}">
+          <img src="${productImg}" alt="${productImgAlt} id="product-img">
           </a>
           <div>
           <h5>${productTitel}</h5>
