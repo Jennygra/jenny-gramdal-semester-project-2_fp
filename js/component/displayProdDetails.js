@@ -1,6 +1,7 @@
 import { baseURL } from "../utilities/baseUrl.js";
 import { addToCart } from "../utilities/addToCart.js";
 import { getUserName } from "../utilities/storage.js";
+import { modal } from "./modal.js";
 
 const productDetailContainer = document.querySelector(
   ".product-detail-container"
@@ -47,6 +48,12 @@ export function displayProductDetails(product) {
     <p class="product_detail--fee">Fee included. Shipping is calculated at checkout.</p>
     <p class="product_detail--price">Nok ${price}</p>
     </div>
+
+    <div id="mymodal" class="modal">
+    <div class="close">x</div>
+    <img class="modal-content" id="img01">
+    <div id="caption"></div>
+    </div>
   
     <div>
     <p>${description}</p>
@@ -63,4 +70,6 @@ export function displayProductDetails(product) {
 
   const cartBtn = document.querySelector("#cartBtn");
   cartBtn.addEventListener("click", addToCart);
+
+  modal();
 }
