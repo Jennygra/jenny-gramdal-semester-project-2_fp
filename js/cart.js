@@ -4,6 +4,16 @@ import { displayMsg } from "./component/displayMsg.js";
 import { removeFromCart } from "./utilities/removeFromCart.js";
 import { totalPrice } from "./component/totalPrice.js";
 
+const loaderContainer = document.querySelector(".loader-container");
+const cartContainer = document.querySelector(".cart--container");
+
+cartContainer.style.display = "none";
+
+setTimeout(() => {
+  loaderContainer.style.display = "none";
+  cartContainer.style.display = "";
+}, 1000);
+
 createNav();
 totalPrice();
 

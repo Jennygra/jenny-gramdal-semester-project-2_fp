@@ -3,6 +3,24 @@ import { baseURL } from "./utilities/baseUrl.js";
 import { displayProductDetails } from "./component/displayProdDetails.js";
 import { featureProduct } from "./component/featureProduct.js";
 
+const loaderContainer = document.querySelector(".loader-container");
+const productDetailWrapper = document.querySelector(".product-detail--wrapper");
+const featureProductContainer = document.querySelector(
+  ".feature-products-container"
+);
+const bannerContainer = document.querySelector(".banner-container");
+
+featureProductContainer.style.display = "none";
+bannerContainer.style.display = "none";
+productDetailWrapper.style.display = "none";
+
+setTimeout(() => {
+  loaderContainer.style.display = "none";
+  productDetailWrapper.style.display = "";
+  featureProductContainer.style.display = "";
+  bannerContainer.style.display = "";
+}, 1000);
+
 createNav();
 
 const queryString = document.location.search;

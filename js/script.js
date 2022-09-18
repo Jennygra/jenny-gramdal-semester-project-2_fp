@@ -6,15 +6,31 @@ import createNewsletter from "./component/newsletter.js";
 createNav();
 createNewsletter();
 
-// const featureProductContainer = document.querySelector(
-//   ".feature-products-container"
-// );
-// const loaderContainer = document.querySelector(".loader--container");
+const loaderContainer = document.querySelector(".loader-container");
+const featureProductContainer = document.querySelector(
+  ".feature-products-container"
+);
+const bannerContainer = document.querySelector(".banner-container");
+const featureCollectionContainer = document.querySelector(
+  ".feature-collection-container"
+);
+const newsletterContainer = document.querySelector(".newsletter-container");
+const footerBanner = document.querySelector(".footer-banner");
 
-// setTimeout(() => {
-//   loaderContainer.style.display = "none";
-//   featureProductContainer.style.display = "";
-// }, 1500);
+featureProductContainer.style.display = "none";
+bannerContainer.style.display = "none";
+featureCollectionContainer.style.display = "none";
+newsletterContainer.style.display = "none";
+footerBanner.style.display = "none";
+
+setTimeout(() => {
+  loaderContainer.style.display = "none";
+  featureProductContainer.style.display = "";
+  bannerContainer.style.display = "";
+  featureCollectionContainer.style.display = "";
+  newsletterContainer.style.display = "";
+  footerBanner.style.display = "";
+}, 1800);
 
 const productUrl = baseURL + "/products";
 
