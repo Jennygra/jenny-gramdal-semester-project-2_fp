@@ -14,6 +14,8 @@ createNewsletter();
     const response = await fetch(productUrl);
     const json = await response.json();
 
+    console.log(json);
+
     displayProducts(json);
     searchProduct(json);
   } catch (error) {

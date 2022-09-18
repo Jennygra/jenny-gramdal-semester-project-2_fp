@@ -77,8 +77,6 @@ async function addProduct(name, price, description, image, feature) {
     if (json.error) {
       console.log("You dont have the access to add products");
     }
-
-    console.log(json);
   } catch (error) {
     console.log(error);
   }

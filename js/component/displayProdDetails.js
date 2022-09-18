@@ -8,6 +8,7 @@ const productDetailContainer = document.querySelector(
 
 export function displayProductDetails(product) {
   const img = baseURL + product[0].image.url;
+  const altImg = product[0].image_url;
   const titel = product[0].title;
   const imgAlt = product[0].image.alternativeText;
   const price = product[0].price;
@@ -15,8 +16,14 @@ export function displayProductDetails(product) {
   const id = product[0].id;
   const userName = getUserName();
 
-  let editBtn = "";
+  let prodImg;
+  if (img === "http://localhost:1337undefined") {
+    prodImg = altImg;
+  } else {
+    prodImg = img;
+  }
 
+  let editBtn = "";
   if (userName) {
     editBtn = `
     <button
@@ -31,7 +38,7 @@ export function displayProductDetails(product) {
   productDetailContainer.innerHTML += `
     <div class="product_detail--wrapper">
     <div class="product_detail--img">
-    <img src="${img}" alt="${imgAlt}">
+    <img src="${prodImg}" alt="${imgAlt}">
     </div>
   
     <div class="product_detail--details">

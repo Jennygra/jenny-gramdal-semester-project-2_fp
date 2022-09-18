@@ -11,15 +11,24 @@ export function featureProduct(product) {
 
   for (let i = 0; i < featuredProducts.length; i++) {
     const productImg = baseURL + product[i].image.url;
+    const productAltImg = product[i].image_url;
     const productTitel = product[i].title;
     const productImgAlt = product[i].image.alternativeText;
     const productPrice = product[i].price;
     const productId = product[i].id;
 
+    let img;
+
+    if (productImg === "http://localhost:1337undefined") {
+      img = productAltImg;
+    } else {
+      img = productImg;
+    }
+
     carouselContainer.innerHTML += `
       <div class="feature-products-carousel--item">
       <a href="product-details.html?id=${productId}" id="${productId}">
-      <img src="${productImg}" alt="${productImgAlt}">
+      <img src="${img}" alt="${productImgAlt}">
       </a>
       <div>
       <h5>${productTitel}</h5>

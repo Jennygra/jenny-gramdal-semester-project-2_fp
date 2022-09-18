@@ -27,7 +27,7 @@ const featureCheckbox = document.querySelector(".edit_feature--checkbox");
     idInput.value = json[0].id;
     nameInput.value = json[0].title;
     priceInput.value = json[0].price;
-    imageInput.value = json[0].image_url;
+    imageInput.value = json[0].image.url || json[0].image_url;
     descriptionInput.value = json[0].description;
 
     let isChecked;
