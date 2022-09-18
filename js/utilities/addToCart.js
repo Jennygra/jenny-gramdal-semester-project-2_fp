@@ -24,4 +24,9 @@ export function addToCart() {
     getCurrentProduct.push(products);
     saveProduct(getCurrentProduct);
   }
+
+  // else {
+  //   const newProd = getCurrentProduct.filter((prod) => prod.id !== id);
+  //   saveProduct(newProd);
+  // }
 }

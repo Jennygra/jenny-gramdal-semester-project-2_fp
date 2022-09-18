@@ -12,7 +12,7 @@ cartContainer.style.display = "none";
 setTimeout(() => {
   loaderContainer.style.display = "none";
   cartContainer.style.display = "";
-}, 1000);
+}, 500);
 
 createNav();
 totalPrice();
