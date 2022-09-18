@@ -29,10 +29,18 @@ if (localStorage.length === 0 || localStorage.getItem(listKey) === "[]") {
   displayMsg("error", "The cart is empty", ".cart_list--container");
 } else {
   cartList.forEach((product) => {
+    let prodImg;
+
+    if (product.img === "http://localhost:1337undefined") {
+      prodImg = product.image_url;
+    } else {
+      prodImg = product.img;
+    }
+
     cartListContainer.innerHTML += `
         <div class="cart_list--wrapper ">
         <a href="product-details.html?id=${product.id}" id="${product.id}">
-        <img src="${product.img}" alt="">
+        <img src="${prodImg}" alt="">
         </a>
         <div>
         <h5>${product.title}</h5>

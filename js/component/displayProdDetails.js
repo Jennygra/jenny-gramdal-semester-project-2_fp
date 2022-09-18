@@ -60,7 +60,7 @@ export function displayProductDetails(product) {
     </div>
   
     <div>
-    <button class="cta-btn" id="cartBtn" data-id="${id}" data-title="${titel}" data-price="${price}" data-img="${img}"> Add to cart </button>
+    <button class="cta-btn" id="cartBtn" data-id="${id}" data-title="${titel}" data-price="${price}" data-img="${prodImg}"> Add to cart </button>
     ${editBtn}
     </div>
     </div>
