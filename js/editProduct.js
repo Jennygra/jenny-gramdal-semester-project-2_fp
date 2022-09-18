@@ -30,6 +30,16 @@ const featureCheckbox = document.querySelector(".edit_feature--checkbox");
     imageInput.value = json[0].image_url;
     descriptionInput.value = json[0].description;
 
+    let isChecked;
+
+    if (json[0].featured === true) {
+      isChecked = true;
+    } else {
+      return isChecked;
+    }
+
+    featureCheckbox.checked = isChecked;
+
     deleteProduct(json[0].id);
   } catch (error) {
     console.log(error);
@@ -65,8 +75,6 @@ function submitForm() {
     isChecked = false;
   }
 
-  console.log(featureCheckbox);
-
   updateProduct(
     idValue,
     nameValue,
@@ -98,8 +106,6 @@ async function updateProduct(id, name, price, description, image, feature) {
       Authorization: `Bearer ${apiToken}`,
     },
   };
-
-  console.log(option);
 
   try {
     const response = await fetch(url, option);
