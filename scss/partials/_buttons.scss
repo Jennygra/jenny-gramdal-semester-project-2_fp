@@ -18,7 +18,7 @@
   background: $primary-color;
 }
 
-#editProduct-btn {
+#product_details_edit-btn {
   color: black;
   text-decoration: underline;
   font-weight: bold;
@@ -37,6 +37,11 @@
 #deleteProduct-btn {
   background: $dark-gray;
   border: none;
+}
+
+#deleteProduct-btn:hover {
+  color: white;
+  background-color: $secondary-color;
 }
 
 .log_out--container {

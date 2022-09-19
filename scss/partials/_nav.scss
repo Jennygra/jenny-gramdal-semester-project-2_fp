@@ -55,19 +55,19 @@ header a {
   }
 }
 
-@media screen and (min-width: 993px) {
+@media screen and (min-width: 1066px) {
   .hamburger-label,
   #hamburger-menu {
     display: none;
   }
 
   .nav-container {
-    max-width: 90%;
+    max-width: 95%;
     margin: auto;
   }
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1065px) {
   nav,
   #hamburger-menu {
     display: none;

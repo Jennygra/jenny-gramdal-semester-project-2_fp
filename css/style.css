@@ -86,7 +86,7 @@ h5 {
   background: #3db290;
 }
 
-#editProduct-btn {
+#product_details_edit-btn {
   color: black;
   text-decoration: underline;
   font-weight: bold;
@@ -105,6 +105,11 @@ h5 {
 #deleteProduct-btn {
   background: #bdbdbd;
   border: none;
+}
+
+#deleteProduct-btn:hover {
+  color: white;
+  background-color: #444444;
 }
 
 .log_out--container {
@@ -187,18 +192,18 @@ header a :hover {
   color: #3db290;
 }
 
-@media screen and (min-width: 993px) {
+@media screen and (min-width: 1066px) {
   .hamburger-label,
   #hamburger-menu {
     display: none;
   }
   .nav-container {
-    max-width: 90%;
+    max-width: 95%;
     margin: auto;
   }
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1065px) {
   nav,
   #hamburger-menu {
     display: none;
@@ -284,6 +289,9 @@ header a :hover {
 
 .feature-products-item--text {
   max-width: 200px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .feature-products-wrapper {
@@ -329,6 +337,8 @@ header a :hover {
   display: -ms-flexbox;
   display: flex;
   gap: 2em;
+  max-width: 90%;
+  margin: auto;
 }
 
 .feature-products-item--scroller {
@@ -378,6 +388,10 @@ header a :hover {
   .feature-products-container {
     padding: 2em 1em;
   }
+  .feature-products-carousel--item a {
+    height: 200px;
+    width: 200px;
+  }
 }
 
 .prducts-container {
@@ -400,6 +414,11 @@ header a :hover {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+}
+
+.search-input {
+  border: 2px solid #444444;
+  padding: 5px;
 }
 
 .products--wrapper {
@@ -498,18 +517,22 @@ header a :hover {
 }
 
 .feature-collection-container {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   overflow: hidden;
 }
 
 .feature-collection-item {
   position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1;
+          flex: 1 1;
 }
 
 .feature-collection-item img {
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 100%;
   height: 100%;
 }
@@ -530,7 +553,13 @@ header a :hover {
 
 @media screen and (max-width: 640px) {
   .feature-collection-item--text {
-    width: 100%;
+    width: 90%;
+  }
+  .feature-collection-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
@@ -595,7 +624,9 @@ header a :hover {
 }
 
 .error-msg {
-  color: red;
+  color: darkred;
+  background-color: lightsalmon;
+  border: 2px solid darkred;
   padding: 10px;
   font-weight: bold;
 }
@@ -750,6 +781,7 @@ header a :hover {
 .add-product-form {
   max-width: 600px;
   margin: auto;
+  font-weight: bold;
 }
 
 .edit-product-form--description,
@@ -761,6 +793,16 @@ header a :hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.edit-product-form_btn--container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1em 0em;
 }
 
 .no_access_msg--wrapper {
@@ -892,6 +934,7 @@ footer img {
 footer,
 footer a {
   color: #444444;
+  font-weight: bold;
 }
 
 .footer-item--icons {

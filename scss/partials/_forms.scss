@@ -22,10 +22,17 @@
 .add-product-form {
   max-width: 600px;
   margin: auto;
+  font-weight: bold;
 }
 
 .edit-product-form--description,
 .add-product-form--description {
   display: flex;
   flex-direction: column;
+}
+
+.edit-product-form_btn--container {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em 0em;
 }

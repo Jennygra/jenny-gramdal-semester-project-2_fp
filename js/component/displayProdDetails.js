@@ -28,7 +28,7 @@ export function displayProductDetails(product) {
   if (userName) {
     editBtn = `
     <button
-    id="editProduct-btn"
+    id="product_details_edit-btn"
     class="btn"
     type="button" onclick="location.href='edit-product.html?id=${id}';">
     Edit this product

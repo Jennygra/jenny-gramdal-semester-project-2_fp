@@ -1,14 +1,14 @@
 .feature-collection-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  // max-height: 450px;
+  display: flex;
   overflow: hidden;
 }
 
 .feature-collection-item {
   position: relative;
+  flex: 1 1;
 
   img {
+    object-fit: cover;
     width: 100%;
     height: 100%;
   }
@@ -28,6 +28,10 @@
 
 @media screen and (max-width: 640px) {
   .feature-collection-item--text {
-    width: 100%;
+    width: 90%;
+  }
+
+  .feature-collection-container {
+    flex-direction: column;
   }
 }

@@ -5,7 +5,7 @@ export default function deleteProduct(id) {
   const container = document.querySelector("#delete_product_btn--container");
 
   container.innerHTML = `
-  <button type="button" id="deleteProduct-btn" class="btn btn-primary" type="button">
+  <button type="button" id="deleteProduct-btn" class="btn cta-btn" type="button">
     Delete
   </button>
   `;

@@ -18,6 +18,11 @@
   align-self: center;
 }
 
+.search-input {
+  border: 2px solid $secondary-color;
+  padding: 5px;
+}
+
 .products--wrapper {
   display: flex;
   flex-direction: column;

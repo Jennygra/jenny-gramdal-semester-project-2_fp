@@ -30,7 +30,7 @@ setTimeout(() => {
   featureCollectionContainer.style.display = "";
   newsletterContainer.style.display = "";
   footerBanner.style.display = "";
-}, 1800);
+}, 1500);
 
 const productUrl = baseURL + "/products";
 

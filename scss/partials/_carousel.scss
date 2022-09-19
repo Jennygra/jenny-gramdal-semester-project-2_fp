@@ -9,6 +9,7 @@
 
 .feature-products-item--text {
   max-width: 200px;
+  align-self: center;
 }
 
 .feature-products-wrapper {
@@ -43,6 +44,8 @@
   overflow-y: hidden;
   display: flex;
   gap: 2em;
+  max-width: 90%;
+  margin: auto;
 }
 
 .feature-products-item--scroller {
@@ -85,5 +88,10 @@
 
   .feature-products-container {
     padding: 2em 1em;
+  }
+
+  .feature-products-carousel--item a {
+    height: 200px;
+    width: 200px;
   }
 }

@@ -21,7 +21,7 @@ setTimeout(() => {
   searchContainer.style.display = "";
   featureCollectionContainer.style.display = "";
   newsletterContainer.style.display = "";
-}, 1800);
+}, 1500);
 
 createNav();
 createNewsletter();
