@@ -42,6 +42,5 @@ const productUrl = baseURL + "/products";
     featureProduct(result);
   } catch (error) {
     featureProductContainer.style.display = "none";
-    console.log(error);
   }
 })();

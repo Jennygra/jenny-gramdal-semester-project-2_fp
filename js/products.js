@@ -36,7 +36,6 @@ const productUrl = baseURL + "/products";
     displayProducts(json);
     searchProduct(json);
   } catch (error) {
-    console.log(error);
     displayMsg(
       "warn",
       "Something unexpected happened, please try again!",

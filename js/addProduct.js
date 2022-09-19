@@ -54,6 +54,7 @@ async function addProduct(name, price, description, image, feature) {
     title: name,
     price: price,
     description: description,
+    image: {},
     image_url: image,
     featured: feature,
   });

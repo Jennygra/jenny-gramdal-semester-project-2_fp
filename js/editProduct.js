@@ -31,6 +31,8 @@ const featureCheckbox = document.querySelector(".edit_feature--checkbox");
     imageInput.value = json[0].image.url || json[0].image_url;
     descriptionInput.value = json[0].description;
 
+    deleteProduct(json[0].id);
+
     let isChecked;
 
     if (json[0].featured === true) {
@@ -40,8 +42,6 @@ const featureCheckbox = document.querySelector(".edit_feature--checkbox");
     }
 
     featureCheckbox.checked = isChecked;
-
-    deleteProduct(json[0].id);
   } catch (error) {
     displayMsg(
       "warn",
