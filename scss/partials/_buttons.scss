@@ -6,6 +6,10 @@
   box-shadow: 2px 2px 10px -6px rgba(0, 0, 0, 0.8);
 }
 
+// .cta-btn:hover {
+
+// }
+
 #cartBtn {
   color: black;
   background: white;
@@ -33,7 +37,6 @@
   background-color: $secondary-color;
 }
 
-.remove_from_cart--btn,
 #deleteProduct-btn {
   background: $dark-gray;
   border: none;
@@ -44,6 +47,17 @@
   background-color: $secondary-color;
 }
 
+.remove_from_cart--btn {
+  background: none;
+  border: none;
+  color: $dark-gray;
+  text-decoration: underline;
+}
+
+.remove_from_cart--btn:hover {
+  color: $secondary-color;
+}
+
 .log_out--container {
   text-align: center;
   margin: 5em;
@@ -52,4 +66,9 @@
     background: $dark-gray;
     border: none;
   }
+}
+
+#log_out-btn:hover {
+  background-color: $primary-color;
+  color: white;
 }

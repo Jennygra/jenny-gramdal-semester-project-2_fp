@@ -23,6 +23,12 @@
   max-width: 600px;
   margin: auto;
   font-weight: bold;
+
+  input,
+  textarea {
+    border: 1px solid $secondary-color;
+    padding: 5px;
+  }
 }
 
 .edit-product-form--description,
@@ -35,4 +41,11 @@
   display: flex;
   justify-content: space-between;
   padding: 1em 0em;
+}
+
+@media screen and (max-width: 576px) {
+  .edit-product-form--item,
+  .add-product-form--item {
+    flex-direction: column;
+  }
 }

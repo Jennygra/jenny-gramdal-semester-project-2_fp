@@ -19,6 +19,7 @@
 .total_price--container {
   align-self: flex-end;
   text-align: center;
+  font-weight: bold;
 }
 
 .cart_list--container {
@@ -31,8 +32,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  text-align: center;
+  gap: 10px;
 
-  a {
+  .cart_list--details_img {
     height: 200px;
     width: 200px;
   }
@@ -47,10 +50,22 @@
   }
 }
 
+.cart_list--details {
+  display: flex;
+  gap: 1.5em;
+}
+
+.cart_list--details_details {
+  align-self: center;
+}
+
 @media screen and (max-width: 640px) {
   .cart_list--wrapper {
     flex-direction: column;
     justify-content: center;
-    text-align: center;
+  }
+
+  .cart_list--details {
+    flex-direction: column;
   }
 }

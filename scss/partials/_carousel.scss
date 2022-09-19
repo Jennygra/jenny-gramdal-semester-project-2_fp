@@ -41,6 +41,7 @@
 
 .feature-products-item--product {
   overflow-x: scroll;
+  scroll-behavior: smooth;
   overflow-y: hidden;
   display: flex;
   gap: 2em;

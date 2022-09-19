@@ -1,8 +1,22 @@
 .login_form {
   max-width: 60%;
   margin: 5em auto;
+  font-weight: bold;
 
   h1 {
     text-align: center;
+  }
+
+  input {
+    border: 1px solid $secondary-color;
+    padding: 5px;
+  }
+
+  &--wrapper {
+    margin: 5em auto;
+
+    button {
+      align-items: center;
+    }
   }
 }

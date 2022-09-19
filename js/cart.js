@@ -37,15 +37,24 @@ if (localStorage.getItem(listKey) === "[]") {
     }
 
     cartListContainer.innerHTML += `
-        <div class="cart_list--wrapper ">
+        <div class="cart_list--wrapper"> 
+        <div class="cart_list--details">
+        <div class="cart_list--details_img">
         <a href="product-details.html?id=${product.id}" id="${product.id}">
         <img src="${prodImg}" alt="">
         </a>
-        <div>
+        </div>
+
+        <div class="cart_list--details_details">
         <h5>${product.title}</h5>
         <p>$${product.price}</p>
-        <button class="remove_from_cart--btn cta-btn" id="${product.id}">Remove</button>
         </div>
+        </div>
+
+        <div>
+        <button class="remove_from_cart--btn " id="${product.id}">Remove</button>
+        </div>
+
         </div>
         `;
   });
