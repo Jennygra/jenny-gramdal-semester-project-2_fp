@@ -13,12 +13,15 @@ export function searchProduct(products) {
     );
 
     if (filteredProduct.length === 0) {
-      console.log("no result");
       displayMsg(
-        "error",
+        "warn",
         "No result, please try another word",
         ".products-msg--container"
       );
+    }
+
+    if (filteredProduct.length !== 0) {
+      displayMsg("", "", ".products-msg--container");
     }
 
     displayProducts(filteredProduct);

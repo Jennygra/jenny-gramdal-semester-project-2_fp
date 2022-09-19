@@ -17,15 +17,14 @@ setTimeout(() => {
 createNav();
 totalPrice();
 
-const listKey = "product";
+const listKey = "Product";
 const cartList = isExistingProduct();
 
 export const cartListContainer = document.querySelector(
   ".cart_list--container"
 );
 
-if (localStorage.length === 0 || localStorage.getItem(listKey) === "[]") {
-  console.log("empty cart");
+if (localStorage.getItem(listKey) === "[]") {
   displayMsg("warn", "The cart is empty", ".cart_msg--container");
 } else {
   cartList.forEach((product) => {
