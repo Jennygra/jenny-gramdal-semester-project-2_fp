@@ -23,13 +23,7 @@ function submitForm() {
   const descriptionValue = productDescription.value.trim();
   const imageUrl = productImageInput.value.trim();
 
-  if (
-    nameValue.length === 0 ||
-    priceValue.length === 0 ||
-    isNaN(priceValue) ||
-    imageUrl.length === 0 ||
-    descriptionValue.length === 0
-  ) {
+  if (nameValue.length === 0 || priceValue.length === 0 || isNaN(priceValue)) {
     displayMsg(
       "warn",
       "Please fill out the form correctly",

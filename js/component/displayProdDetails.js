@@ -18,10 +18,14 @@ export function displayProductDetails(product) {
   const userName = getUserName();
 
   let prodImg;
-  if (img === "http://localhost:1337undefined" || null || undefined) {
+  if (img === "http://localhost:1337undefined") {
     prodImg = altImg;
   } else {
     prodImg = img;
+  }
+
+  if (altImg === "" && img === "http://localhost:1337undefined") {
+    prodImg = "./img/no-image.jpg";
   }
 
   let editBtn = "";

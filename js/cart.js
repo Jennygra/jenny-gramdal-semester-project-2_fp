@@ -28,12 +28,21 @@ if (localStorage.getItem(listKey) === "[]") {
   displayMsg("warn", "The cart is empty", ".cart_msg--container");
 } else {
   cartList.forEach((product) => {
+    const imgUrl = product.img;
+    const altImg = product.image_url;
     let prodImg;
 
-    if (product.img === "http://localhost:1337undefined" || null || undefined) {
-      prodImg = product.image_url;
+    console.log(product);
+    console.log(localStorage.getItem("Product"));
+
+    if (product.img === "http://localhost:1337undefined") {
+      prodImg = altImg;
     } else {
-      prodImg = product.img;
+      prodImg = imgUrl;
+    }
+
+    if (altImg === "" && imgUrl === "http://localhost:1337undefined") {
+      prodImg = "./img/no-image.jpg";
     }
 
     cartListContainer.innerHTML += `
@@ -41,7 +50,7 @@ if (localStorage.getItem(listKey) === "[]") {
         <div class="cart_list--details">
         <div class="cart_list--details_img">
         <a href="product-details.html?id=${product.id}" id="${product.id}">
-        <img src="${prodImg}" alt="">
+        <img src="${prodImg}" alt="${product.title}">
         </a>
         </div>
 

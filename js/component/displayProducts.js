@@ -20,6 +20,10 @@ export function displayProducts(product) {
       img = productImg;
     }
 
+    if (altImg === "" && productImg === "http://localhost:1337undefined") {
+      img = "./img/no-image.jpg";
+    }
+
     productsContainer.innerHTML += `
           <div class="products--wrapper">
           <a href="product-details.html?id=${productId}" id="${productId}">

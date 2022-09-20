@@ -25,6 +25,13 @@ export function featureProduct(product) {
       img = productImg;
     }
 
+    if (
+      productAltImg === "" &&
+      productImg === "http://localhost:1337undefined"
+    ) {
+      img = "./img/no-image.jpg";
+    }
+
     carouselContainer.innerHTML += `
       <div class="feature-products-carousel--item">
       <a href="product-details.html?id=${productId}" id="${productId}">
