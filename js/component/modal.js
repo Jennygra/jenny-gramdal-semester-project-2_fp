@@ -11,6 +11,10 @@ export function modal() {
     modal.style.display = "block";
     modalImg.src = this.src;
     captionText.innerHTML = this.alt;
+
+    if (captionText.innerHTML === "undefined") {
+      captionText.style.display = "none";
+    }
   };
 
   modal.onclick = function (event) {
