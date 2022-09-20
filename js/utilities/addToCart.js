@@ -10,6 +10,10 @@ export function addToCart() {
   const cartBtn = document.querySelector("#cartBtn");
   cartBtn.innerHTML = "Added!";
 
+  // setTimeout(() => {
+  //   cartBtn.innerHTML = "Remove from cart";
+  // }, 800);
+
   const cartIcon = document.querySelector(".cart-icon");
   cartIcon.classList.toggle("fa-bounce");
 
