@@ -937,6 +937,10 @@ header a :hover {
   margin: 2em 0em;
 }
 
+.add_prod_msg--container {
+  margin-top: 3em;
+}
+
 .modal {
   display: none;
   position: fixed;

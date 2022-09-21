@@ -24,16 +24,13 @@ export const cartListContainer = document.querySelector(
   ".cart_list--container"
 );
 
-if (localStorage.getItem(listKey) === "[]") {
+if (localStorage.getItem(listKey) === "[]" || !localStorage.getItem(listKey)) {
   displayMsg("warn", "The cart is empty", ".cart_msg--container");
 } else {
   cartList.forEach((product) => {
     const imgUrl = product.img;
     const altImg = product.image_url;
     let prodImg;
-
-    console.log(product);
-    console.log(localStorage.getItem("Product"));
 
     if (product.img === "http://localhost:1337undefined") {
       prodImg = altImg;
