@@ -12,6 +12,9 @@ As part of the semester project, students are expected to create an e-commerce w
 - [Sass](https://sass-lang.com)
 - [Bootstrap](https://getbootstrap.com)
 
+## Demo link
+[Link to demo](https://dainty-tulumba-cddebd.netlify.app)
+
 ## Design Prototype
 
 [Prototype](https://xd.adobe.com/view/f0354f9d-8944-4138-a4b6-46efff2cb7cd-a566/?fullscreen)
